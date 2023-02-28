@@ -1,38 +1,389 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+
+/* header */
+.header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.serchBarContents {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 10vw;
+  margin-right: 10vw;
+}
+
+.fa-people-carry-box {
+  color: #2BCCD1;
+  margin-right: 10px;
+  font-size: 3vh;
+}
+
+.titleName {
+  color: black;
+  font-size: 3vh;
+  font-family: "Comic Sans MS";
+}
+
+.inputForm {
+  width: 50vw;
+  height: 4vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.inputForm>.inputBox {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.inputButton {
+  width: 5vw;
+  height: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #3ccace;
+  padding: 8px;
+}
+
+.fa-magnifying-glass {
+  width: 4vh;
+  color: white;
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+  color: black;
+}
+
+.listsLeft {
+  display:flex;
+  min-width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.categoryList {
+  margin-right: 3vw;
+}
+
+.ListsRight {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+.login {
+  line-height: 32px;
+  margin-right: 3vw;
+}
+
+
+/* main */
+.titleContents {
+  width: 100vw;
+  background-image: url(../public/title-contents.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgb(0 0 0 / 90%);
+}
+
+.serviceTitle {
+  font-size: 8vh;
+}
+
+.serviceExplain {
+  font-size: 2.5vh;
+  line-height: 40px;
+}
+
+.storeBtn {
+  display: flex;
+  margin-top: 24px;
+}
+
+.appleBtn {
+  margin-right: 1vw;
+  height: 9vh;
+}
+
+.googleBtn {
+  height: 9vh;
+}
+
+.selectReasonLists {
+  padding: 5vh 15vw;
+}
+
+.listsTitle {
   text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.selectReasonLists>.listsTitle::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #3ccace;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.reasonLists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.reasonLists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.listPict {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.reasnListNumber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #3ccace;
+  color: #fff;
+}
+
+.reasonListText {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.reasonListBlueText {
+  color: #3ccace;
+  margin: 0 5px;
+}
+
+.reasonListDescription {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.adContents {
+  width: 100vw;
+  background-image: url(../public/ad-contents.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgb(0 0 0 / 90%);
+}
+
+.adTitle {
+  font-size: 5vh;
+  margin-bottom: 2vh;
+}
+
+.adExplain {
+  font-size: 2.5vh;
+  line-height: 30px;
+}
+
+.featureContents {
+  padding: 5vh 15vw;
+}
+
+.featureContentsTitle {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.featureContents>.featureContentsTitle::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #3ccace;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.featureLists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.featureLists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.featureListText {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 50px;
+}
+
+.featureListDescription {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.itemContents {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.itemContents>.itemTitle {
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.itemContents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+
+.itemLists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* footer */
+.adFooterContents {
+  width: 100vw;
+  background-image: url(../public/ad-footer-contents.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgb(0 0 0 / 90%) ;
 }
 
-.App-link {
-  color: #61dafb;
+.adFooterExplain {
+  font-size: 3vh;
+  line-height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.adFooterTitle {
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+.footer {
+  width: 100%;
+  padding: 5vh 0;
+  color: #fff;
+  background-color: #272727;
+  text-align: center;
+}
+
+.footerContents {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.furimaDetails {
+  margin: 0 4vw;
+}
+
+.footerContentHead {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footerLink {
+  color: #fff;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.footerTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.footerTitleName {
+  color: #fff;
+  font-size: 3vh;
+  font-family: "Comic Sans MS";
 }
