@@ -1,23 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import {Title} from "./components/Title";
+import {InputForm} from "./components/InputForm";
+import {Nav} from './components/Nav';
+import {TitleContents} from './components/TitleContents';
+import {SelectReasonLists} from './components/SelectReasonLists';
+import {AdContents} from './components/AdContents';
+import {FeatureContents} from './components/FeatureContents';
+import {ItemContents} from './components/ItemContents';
+import {AdFooterContents} from './components/AdFooterContents';
+import {FooterContents} from './components/FooterContents';
 
 function App() {
+  // const axios = axiosBase.create({
+  //   baseURL: process.env.REACT_APP_DEV_API_URL,
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //     'X-Requested-With': 'XMLHttpRequest'
+  //   },
+  //   responseType: 'json'  
+  // });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="body">
+      <header className="header">
+        <div className="serchBarContents">
+        <Title/>
+        <InputForm />
+        </div>
+        <Nav />
       </header>
+
+      <div className="main">
+        <TitleContents />
+        <SelectReasonLists />
+        <AdContents />
+        <FeatureContents />
+        <ItemContents />
+      </div>
+
+      <div className="ad-footer">
+        <AdFooterContents />
+      </div>
+
+      <div className="footer">
+        <FooterContents />
+      </div>
     </div>
   );
 }
